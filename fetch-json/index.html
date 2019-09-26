@@ -7,7 +7,7 @@
 
     <title>Fetch json example</title>
 
-    <link rel="stylesheet" href="style.css">
+    <!--<link rel="stylesheet" href="style.css">-->
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -22,7 +22,7 @@
   <script>
     var myList = document.querySelector('ul');
 
-    fetch('products.json')
+    fetch('https://demo.ghost.io/ghost/api/v2/content/posts/?key=22444f78447824223cefc48062')
     .then(function(response) {
       if (!response.ok) {
         throw new Error("HTTP error, status = " + response.status);
@@ -30,11 +30,11 @@
       return response.json();
     })
     .then(function(json) {
-      for(var i = 0; i < json.products.length; i++) {
+      for(var i = 0; i < json.posts.length; i++) {
         var listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + json.products[i].Name + '</strong>';
-        listItem.innerHTML +=' can be found in ' + json.products[i].Location + '.';
-        listItem.innerHTML +=' Cost: <strong>£' + json.products[i].Price + '</strong>';
+        listItem.innerHTML = '<strong>' + json.posts[i].title + '</strong>';
+        listItem.innerHTML +=' can be found in ' + json.posts[i].Location + '.';
+        listItem.innerHTML +=' Cost: <strong>£' + json.posts[i].html + '</strong>';
         myList.appendChild(listItem);
       }
     })
