@@ -32,7 +32,7 @@
     .then(function(json) {
       for(var i = 0; i < json.posts.length; i++) {
         var listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + json.posts[i].title + '</strong>';
+        listItem.innerHTML = '<strong>' + json.posts[i].title + '</strong>' + '\n';
         listItem.innerHTML += json.posts[i].primary_author + '.';
         listItem.innerHTML +='<strong>' + json.posts[i].html + '</strong>';
         myList.appendChild(listItem);
