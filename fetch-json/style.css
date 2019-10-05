@@ -1,3 +1,4 @@
+@import url(http://fonts.loli.netgoogleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,latin-ext);
 ul {
   list-style-type: none;
 }
@@ -5,6 +6,8 @@ h1 {
   text-align: center;
 }
 body {
+  font-family: 'Roboto Slab', Raleway, sans-serif;
+  font-weight: 200;
   line-height: 2em;
   padding-left: 2em;
   padding-right: 2em;
