@@ -28,7 +28,7 @@
 	       return response.json();		
 	     })		
 	     .then(function(json) {		
-	       for(var i = 0; i < json.posts.length; i++) {		
+	       for(var i = 0; i < json.results.length; i++) {		
 	         var listItem = document.createElement('li');		
 	         listItem.innerHTML = '<strong>' + json.results[i].title + '</strong>';		
 	         listItem.innerHTML += '<p>' + 'author: ' + json.results[i].author + '</p>';		
