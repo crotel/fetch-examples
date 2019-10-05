@@ -5,14 +5,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width">
 	<title>Fetch json example</title>
-<!--<link rel="stylesheet" href="style.css">-->
+	<link rel="stylesheet" href="style.css">
 <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
 <body>
 <h1>
-	Fetch json example 
+	Prose json test 
 </h1>
 <ul>
 </ul>
@@ -32,7 +32,7 @@
 	         var listItem = document.createElement('li');		
 	         listItem.innerHTML = '<strong>' + json.results[i].title + '</strong>';		
 	         listItem.innerHTML += '<p>' + 'author: ' + json.results[i].author + '</p>';		
-	         listItem.innerHTML +='<strong>' + json.results[i].content + '</strong>';		
+	         listItem.innerHTML +='<strong>' + json.results[i].content + '</strong>' + '<p></p>';		
 	         myList.appendChild(listItem);		
 	       }		
 	     })		
