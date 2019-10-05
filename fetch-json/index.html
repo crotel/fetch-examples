@@ -20,7 +20,7 @@
 <script>
 	var myList = document.querySelector('ul');		     			
 	     //fetch('https://demo.ghost.io/ghost/api/v2/content/posts/?key=22444f78447824223cefc48062')
-         fetch('https://prose.crotel.workers.dev')
+         fetch('https://prose.reststream.com')
 	     .then(function(response) {		
 	       if (!response.ok) {		
 	         throw new Error("HTTP error, status = " + response.status);		
@@ -30,9 +30,9 @@
 	     .then(function(json) {		
 	       for(var i = 0; i < json.posts.length; i++) {		
 	         var listItem = document.createElement('li');		
-	         listItem.innerHTML = '<strong>' + json.posts[i].title + '</strong>' + '\n';		
-	         listItem.innerHTML += 'author: ' + json.posts[i].primary_author + '.';		
-	         listItem.innerHTML +='<strong>' + json.posts[i].html + '</strong>';		
+	         listItem.innerHTML = '<strong>' + json.results[i].title + '</strong>';		
+	         listItem.innerHTML += '<p>' + 'author: ' + json.results[i].author + '</p>';		
+	         listItem.innerHTML +='<strong>' + json.results[i].content + '</strong>';		
 	         myList.appendChild(listItem);		
 	       }		
 	     })		
