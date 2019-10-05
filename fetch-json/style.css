@@ -1,3 +1,17 @@
+ul {
+  list-style-type: none;
+}
+h1 {
+  text-align: center;
+}
+body {
+  line-height: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+  word-wrap: break-word;
+}
+
+/*
 html {
   font-family: sans-serif;
 }
@@ -26,3 +40,4 @@ strong {
   border-bottom: 3px solid purple;
   text-shadow: 2px 2px 1px black;
 }
+*/
