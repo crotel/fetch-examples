@@ -32,7 +32,7 @@
 	         var listItem = document.createElement('li');		
 	         listItem.innerHTML = '<strong>' + json.results[i].title + '</strong>';		
 	         listItem.innerHTML += '<p>' + 'author: ' + json.results[i].author + '</p>';		
-	         listItem.innerHTML +='<strong>' + json.results[i].content + '</strong>' + '<p></p>';		
+	         listItem.innerHTML +='<pre>' + json.results[i].content + '</pre>' + '<p>  </p>' + '<hr/>';		
 	         myList.appendChild(listItem);		
 	       }		
 	     })		
